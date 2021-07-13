@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "G:\\VSrepos\\tgBotec\\TelegramBotForParsingTikTok.csproj": {}
+    "G:\\Programs\\MyGitHubProjects\\TelegramBot\\TelegramBotForParsingTikTok.csproj": {}
   },
   "projects": {
-    "G:\\VSrepos\\tgBotec\\TelegramBotForParsingTikTok.csproj": {
+    "G:\\Programs\\MyGitHubProjects\\TelegramBot\\TelegramBotForParsingTikTok.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\VSrepos\\tgBotec\\TelegramBotForParsingTikTok.csproj",
+        "projectUniqueName": "G:\\Programs\\MyGitHubProjects\\TelegramBot\\TelegramBotForParsingTikTok.csproj",
         "projectName": "zxc_mem_bot",
-        "projectPath": "G:\\VSrepos\\tgBotec\\TelegramBotForParsingTikTok.csproj",
+        "projectPath": "G:\\Programs\\MyGitHubProjects\\TelegramBot\\TelegramBotForParsingTikTok.csproj",
         "packagesPath": "C:\\Users\\adxud\\.nuget\\packages\\",
-        "outputPath": "G:\\VSrepos\\tgBotec\\obj\\",
+        "outputPath": "G:\\Programs\\MyGitHubProjects\\TelegramBot\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -45,7 +45,7 @@
           "dependencies": {
             "Telegram.Bot": {
               "target": "Package",
-              "version": "[16.0.0, )"
+              "version": "[16.0.1, )"
             }
           },
           "imports": [
@@ -63,7 +63,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

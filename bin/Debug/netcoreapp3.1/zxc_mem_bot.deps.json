@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v3.1": {
       "zxc_mem_bot/1.0.0": {
         "dependencies": {
-          "Telegram.Bot": "16.0.0"
+          "Telegram.Bot": "16.0.1"
         },
         "runtime": {
           "zxc_mem_bot.dll": {}
@@ -707,7 +707,7 @@
           "System.Xml.ReaderWriter": "4.3.0"
         }
       },
-      "Telegram.Bot/16.0.0": {
+      "Telegram.Bot/16.0.1": {
         "dependencies": {
           "NETStandard.Library": "1.6.1",
           "Newtonsoft.Json": "11.0.2",
@@ -716,8 +716,8 @@
         },
         "runtime": {
           "lib/netstandard1.3/Telegram.Bot.dll": {
-            "assemblyVersion": "16.0.0.0",
-            "fileVersion": "16.0.0.0"
+            "assemblyVersion": "16.0.1.0",
+            "fileVersion": "16.0.1.0"
           }
         }
       }
@@ -1261,12 +1261,12 @@
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
     },
-    "Telegram.Bot/16.0.0": {
+    "Telegram.Bot/16.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-tAj4YIb3NSJ7R/77X9HxDWeHnNEa2nfAJcu5OxCHHiTM1QM44Mk3EB3r/5XJ3JRBIIthY8oKe62A1ByJCx1oxA==",
-      "path": "telegram.bot/16.0.0",
-      "hashPath": "telegram.bot.16.0.0.nupkg.sha512"
+      "sha512": "sha512-SO5E+TT3pucwOpqnwLU1Qpcqg03QdK5WuLyjDPHUb1SAq2P4NXN0q6jnd+Bm9OApg2PF1ggRspijl//PWtHSpg==",
+      "path": "telegram.bot/16.0.1",
+      "hashPath": "telegram.bot.16.0.1.nupkg.sha512"
     }
   }
 }

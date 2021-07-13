@@ -1240,7 +1240,7 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
-      "Telegram.Bot/16.0.0": {
+      "Telegram.Bot/16.0.1": {
         "type": "package",
         "dependencies": {
           "NETStandard.Library": "1.6.1",
@@ -4634,10 +4634,10 @@
         "system.xml.xdocument.nuspec"
       ]
     },
-    "Telegram.Bot/16.0.0": {
-      "sha512": "tAj4YIb3NSJ7R/77X9HxDWeHnNEa2nfAJcu5OxCHHiTM1QM44Mk3EB3r/5XJ3JRBIIthY8oKe62A1ByJCx1oxA==",
+    "Telegram.Bot/16.0.1": {
+      "sha512": "SO5E+TT3pucwOpqnwLU1Qpcqg03QdK5WuLyjDPHUb1SAq2P4NXN0q6jnd+Bm9OApg2PF1ggRspijl//PWtHSpg==",
       "type": "package",
-      "path": "telegram.bot/16.0.0",
+      "path": "telegram.bot/16.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4646,14 +4646,14 @@
         "lib/netstandard1.3/Telegram.Bot.dll",
         "lib/netstandard1.3/Telegram.Bot.xml",
         "package-icon.png",
-        "telegram.bot.16.0.0.nupkg.sha512",
+        "telegram.bot.16.0.1.nupkg.sha512",
         "telegram.bot.nuspec"
       ]
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "Telegram.Bot >= 16.0.0"
+      "Telegram.Bot >= 16.0.1"
     ]
   },
   "packageFolders": {
@@ -4663,11 +4663,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\VSrepos\\tgBotec\\TelegramBotForParsingTikTok.csproj",
+      "projectUniqueName": "G:\\Programs\\MyGitHubProjects\\TelegramBot\\TelegramBotForParsingTikTok.csproj",
       "projectName": "zxc_mem_bot",
-      "projectPath": "G:\\VSrepos\\tgBotec\\TelegramBotForParsingTikTok.csproj",
+      "projectPath": "G:\\Programs\\MyGitHubProjects\\TelegramBot\\TelegramBotForParsingTikTok.csproj",
       "packagesPath": "C:\\Users\\adxud\\.nuget\\packages\\",
-      "outputPath": "G:\\VSrepos\\tgBotec\\obj\\",
+      "outputPath": "G:\\Programs\\MyGitHubProjects\\TelegramBot\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -4701,7 +4701,7 @@
         "dependencies": {
           "Telegram.Bot": {
             "target": "Package",
-            "version": "[16.0.0, )"
+            "version": "[16.0.1, )"
           }
         },
         "imports": [
@@ -4719,7 +4719,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

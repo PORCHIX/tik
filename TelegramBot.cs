@@ -26,14 +26,12 @@ namespace MyTgBot {
         private static async void OnMessageHandler(object sender, MessageEventArgs e) {
             var msg = e.Message;
             videoUrl = msg.Text;
-            Console.WriteLine("Video link: " + videoUrl);
-            //await bot.DeleteMessageAsync(chatId: tgAdmin, messageId: msg.MessageId);
             switch (msg.From.Id){
                 case tgAdmin:
                     CreateVideoPost(msg);
                     break;
                 default:
-                    var infoMsg = await SendTextMessage(msg.From.Id, "Sorry, but this bot is available only for personal use for now");
+                    await SendAutoDeleteMessage(msg.From.Id, "Sorry, but this bot is available only for personal use for now");
                     break;
             }
 
@@ -62,7 +60,8 @@ namespace MyTgBot {
             switch (e.CallbackQuery.Data) {
                 case "PostVideo": 
                     Console.WriteLine("Video Posted to " + "\""+ bot.GetChatAsync(tgChannel).Result.Title+ "\"");
-                    await bot.SendVideoAsync(chatId: tgChannel, video: e.CallbackQuery.Message.Video.FileId, disableNotification: true);
+                    //await bot.SendVideoAsync(chatId: tgChannel, video: e.CallbackQuery.Message.Video.FileId, disableNotification: true);
+                    await bot.AnswerCallbackQueryAsync(callbackQueryId: e.CallbackQuery.Id);
                     break;
                 case "PostVideo_Test":
                     Console.WriteLine("Video Posted to " + "\"" + bot.GetChatAsync(tgTestChannel).Result.Title + "\"");
@@ -77,12 +76,11 @@ namespace MyTgBot {
                     await bot.AnswerCallbackQueryAsync(callbackQueryId: e.CallbackQuery.Id);
                     break;
             }
-            //await bot.AnswerCallbackQueryAsync(callbackQueryId: e.CallbackQuery.Id);
         }
 
 
         public async Task Turn_On() {
-            ==bot.StartReceiving();
+            bot.StartReceiving();
         }
         public async Task Turn_Off() {
             bot.StopReceiving();
