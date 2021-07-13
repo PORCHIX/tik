@@ -1,0 +1,71 @@
+{
+  "format": 1,
+  "restore": {
+    "G:\\VSrepos\\tgBotec\\TelegramBotForParsingTikTok.csproj": {}
+  },
+  "projects": {
+    "G:\\VSrepos\\tgBotec\\TelegramBotForParsingTikTok.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\VSrepos\\tgBotec\\TelegramBotForParsingTikTok.csproj",
+        "projectName": "zxc_mem_bot",
+        "projectPath": "G:\\VSrepos\\tgBotec\\TelegramBotForParsingTikTok.csproj",
+        "packagesPath": "C:\\Users\\adxud\\.nuget\\packages\\",
+        "outputPath": "G:\\VSrepos\\tgBotec\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\adxud\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Telegram.Bot": {
+              "target": "Package",
+              "version": "[16.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

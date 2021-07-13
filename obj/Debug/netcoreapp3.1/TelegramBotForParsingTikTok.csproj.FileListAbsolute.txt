@@ -1,0 +1,16 @@
+G:\VSrepos\tgBotec\bin\Debug\netcoreapp3.1\zxc_mem_bot.exe
+G:\VSrepos\tgBotec\bin\Debug\netcoreapp3.1\zxc_mem_bot.deps.json
+G:\VSrepos\tgBotec\bin\Debug\netcoreapp3.1\zxc_mem_bot.runtimeconfig.json
+G:\VSrepos\tgBotec\bin\Debug\netcoreapp3.1\zxc_mem_bot.runtimeconfig.dev.json
+G:\VSrepos\tgBotec\bin\Debug\netcoreapp3.1\zxc_mem_bot.dll
+G:\VSrepos\tgBotec\bin\Debug\netcoreapp3.1\zxc_mem_bot.pdb
+G:\VSrepos\tgBotec\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+G:\VSrepos\tgBotec\bin\Debug\netcoreapp3.1\Telegram.Bot.dll
+G:\VSrepos\tgBotec\obj\Debug\netcoreapp3.1\TelegramBotForParsingTikTok.csprojAssemblyReference.cache
+G:\VSrepos\tgBotec\obj\Debug\netcoreapp3.1\TelegramBotForParsingTikTok.AssemblyInfoInputs.cache
+G:\VSrepos\tgBotec\obj\Debug\netcoreapp3.1\TelegramBotForParsingTikTok.AssemblyInfo.cs
+G:\VSrepos\tgBotec\obj\Debug\netcoreapp3.1\TelegramBotForParsingTikTok.csproj.CoreCompileInputs.cache
+G:\VSrepos\tgBotec\obj\Debug\netcoreapp3.1\TelegramBotForParsingTikTok.csproj.CopyComplete
+G:\VSrepos\tgBotec\obj\Debug\netcoreapp3.1\zxc_mem_bot.dll
+G:\VSrepos\tgBotec\obj\Debug\netcoreapp3.1\zxc_mem_bot.pdb
+G:\VSrepos\tgBotec\obj\Debug\netcoreapp3.1\TelegramBotForParsingTikTok.genruntimeconfig.cache

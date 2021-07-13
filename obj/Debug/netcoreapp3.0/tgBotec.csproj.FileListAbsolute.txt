@@ -1,0 +1,4 @@
+G:\VSrepos\tgBotec\obj\Debug\netcoreapp3.0\tgBotec.csprojAssemblyReference.cache
+G:\VSrepos\tgBotec\obj\Debug\netcoreapp3.0\tgBotec.AssemblyInfoInputs.cache
+G:\VSrepos\tgBotec\obj\Debug\netcoreapp3.0\tgBotec.AssemblyInfo.cs
+G:\VSrepos\tgBotec\obj\Debug\netcoreapp3.0\tgBotec.csproj.CoreCompileInputs.cache
