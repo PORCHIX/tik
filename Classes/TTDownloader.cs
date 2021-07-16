@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using System.IO;
 using System;
 
-namespace TikTokDownloader {
+namespace TTDownloaderNS {
     class TTDownloader {
         public static async Task Download (string ttUrl, string videoPath) {
             string htmlSourceCode;
