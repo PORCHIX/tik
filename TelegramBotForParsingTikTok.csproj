@@ -2,9 +2,9 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-    <AssemblyName>zxc_mem_bot</AssemblyName>
-    <RootNamespace>zxc_mem_bot</RootNamespace>
+    <TargetFramework>net5.0</TargetFramework>
+    <AssemblyName>TikTokSender</AssemblyName>
+    <RootNamespace>TelegramBotProject</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -14,11 +14,20 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Info\Logs.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Telegram.Bot" Version="16.0.1" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Users\" />
+    <Folder Include="VideoBuffer\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Info\Logs.txt" />
   </ItemGroup>
 
 </Project>

@@ -12,15 +12,14 @@ namespace TTDownloaderNS {
             HttpWebResponse response = (HttpWebResponse)await request.GetResponseAsync();
 
             using (Stream stream = response.GetResponseStream()) {
-                using (StreamReader reader = new StreamReader(stream)) {
+                using (StreamReader reader = new (stream)) {
                     htmlSourceCode = reader.ReadToEnd();
-                    if (htmlSourceCode.IndexOf("https") == -1) { Console.WriteLine(htmlSourceCode); }
                     string[] subs = htmlSourceCode.Split('"');
                     url = subs[7];
                 }
             }
             response.Close();
-            WebClient webClient = new WebClient();
+            WebClient webClient = new();
             string videoId = url.Remove(0, 44);
             string rightUrl = "https://www.tiktokdownloader.org/d.php?h=" + videoId;
             webClient.DownloadFile(rightUrl, videoPath);
