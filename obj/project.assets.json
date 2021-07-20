@@ -1240,7 +1240,7 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
-      "Telegram.Bot/16.0.1": {
+      "Telegram.Bot/16.0.2": {
         "type": "package",
         "dependencies": {
           "NETStandard.Library": "1.6.1",
@@ -4634,10 +4634,10 @@
         "system.xml.xdocument.nuspec"
       ]
     },
-    "Telegram.Bot/16.0.1": {
-      "sha512": "SO5E+TT3pucwOpqnwLU1Qpcqg03QdK5WuLyjDPHUb1SAq2P4NXN0q6jnd+Bm9OApg2PF1ggRspijl//PWtHSpg==",
+    "Telegram.Bot/16.0.2": {
+      "sha512": "kasIAeRUfXeeUCfwjLCtqCGi2PerSqpNnNQznZam/NxqNTAMxXKffsdtcKjSx34dH17FSIHEvLMkPkZed5JbfQ==",
       "type": "package",
-      "path": "telegram.bot/16.0.1",
+      "path": "telegram.bot/16.0.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4646,14 +4646,14 @@
         "lib/netstandard1.3/Telegram.Bot.dll",
         "lib/netstandard1.3/Telegram.Bot.xml",
         "package-icon.png",
-        "telegram.bot.16.0.1.nupkg.sha512",
+        "telegram.bot.16.0.2.nupkg.sha512",
         "telegram.bot.nuspec"
       ]
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "Telegram.Bot >= 16.0.1"
+      "Telegram.Bot >= 16.0.2"
     ]
   },
   "packageFolders": {
@@ -4663,9 +4663,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Programs\\MyGitHubProjects\\TelegramBot\\TelegramBotForParsingTikTok.csproj",
+      "projectUniqueName": "G:\\Programs\\MyGitHubProjects\\TelegramBot\\TikTokSender.csproj",
       "projectName": "TikTokSender",
-      "projectPath": "G:\\Programs\\MyGitHubProjects\\TelegramBot\\TelegramBotForParsingTikTok.csproj",
+      "projectPath": "G:\\Programs\\MyGitHubProjects\\TelegramBot\\TikTokSender.csproj",
       "packagesPath": "C:\\Users\\adxud\\.nuget\\packages\\",
       "outputPath": "G:\\Programs\\MyGitHubProjects\\TelegramBot\\obj\\",
       "projectStyle": "PackageReference",
@@ -4701,7 +4701,7 @@
         "dependencies": {
           "Telegram.Bot": {
             "target": "Package",
-            "version": "[16.0.1, )"
+            "version": "[16.0.2, )"
           }
         },
         "imports": [

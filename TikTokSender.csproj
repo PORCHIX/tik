@@ -1,10 +1,15 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
     <AssemblyName>TikTokSender</AssemblyName>
     <RootNamespace>TelegramBotProject</RootNamespace>
+    <ApplicationIcon>tiktoksender.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>false</Optimize>
   </PropertyGroup>
 
   <ItemGroup>
@@ -14,15 +19,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="Classes\Core\Variables.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Info\Logs.txt" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Telegram.Bot" Version="16.0.1" />
+    <PackageReference Include="Telegram.Bot" Version="16.0.2" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Users\" />
     <Folder Include="VideoBuffer\" />
   </ItemGroup>
 

@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v5.0": {
       "TikTokSender/1.0.0": {
         "dependencies": {
-          "Telegram.Bot": "16.0.1"
+          "Telegram.Bot": "16.0.2"
         },
         "runtime": {
           "TikTokSender.dll": {}
@@ -707,7 +707,7 @@
           "System.Xml.ReaderWriter": "4.3.0"
         }
       },
-      "Telegram.Bot/16.0.1": {
+      "Telegram.Bot/16.0.2": {
         "dependencies": {
           "NETStandard.Library": "1.6.1",
           "Newtonsoft.Json": "11.0.2",
@@ -716,8 +716,8 @@
         },
         "runtime": {
           "lib/netstandard1.3/Telegram.Bot.dll": {
-            "assemblyVersion": "16.0.1.0",
-            "fileVersion": "16.0.1.0"
+            "assemblyVersion": "16.0.2.0",
+            "fileVersion": "16.0.2.0"
           }
         }
       }
@@ -1261,12 +1261,12 @@
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
     },
-    "Telegram.Bot/16.0.1": {
+    "Telegram.Bot/16.0.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-SO5E+TT3pucwOpqnwLU1Qpcqg03QdK5WuLyjDPHUb1SAq2P4NXN0q6jnd+Bm9OApg2PF1ggRspijl//PWtHSpg==",
-      "path": "telegram.bot/16.0.1",
-      "hashPath": "telegram.bot.16.0.1.nupkg.sha512"
+      "sha512": "sha512-kasIAeRUfXeeUCfwjLCtqCGi2PerSqpNnNQznZam/NxqNTAMxXKffsdtcKjSx34dH17FSIHEvLMkPkZed5JbfQ==",
+      "path": "telegram.bot/16.0.2",
+      "hashPath": "telegram.bot.16.0.2.nupkg.sha512"
     }
   }
 }

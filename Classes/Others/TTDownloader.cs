@@ -12,11 +12,11 @@ namespace TTDownloaderNS {
             HttpWebResponse response = (HttpWebResponse)await request.GetResponseAsync();
 
             using (Stream stream = response.GetResponseStream()) {
-                using (StreamReader reader = new (stream)) {
-                    htmlSourceCode = reader.ReadToEnd();
-                    string[] subs = htmlSourceCode.Split('"');
-                    url = subs[7];
-                }
+                StreamReader reader = new(stream);
+                htmlSourceCode = reader.ReadToEnd();
+                string[] subs = htmlSourceCode.Split('"');
+                url = subs[7];
+                
             }
             response.Close();
             WebClient webClient = new();

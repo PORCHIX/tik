@@ -1,6 +1,4 @@
-﻿TikTok: https://www.tiktok.com/@why7even/video/6983878557286141185
-@Why7even(474684994) - Успешно запостил видео в @tiktoksender_test(-1001274418879)
-TikTok: https://www.tiktok.com/@why7even/video/6983878557286141185
-@Why7even(474684994) - Успешно запостил видео в @zxc_memes_test(-1001370346032)
-TikTok: https://www.tiktok.com/@why7even/video/6983878557286141185
-@Why7even(474684994) - Успешно запостил видео в @tiktoksender_test(-1001274418879)
+﻿[21.07.2021 00:25:20] @Why7even(474684994) успешно отправил в чат бота TikTok: https://www.tiktok.com/@dda637/video/6985065979734723845
+[21.07.2021 00:25:20] У пользователя @Why7even(474684994) возникла ошибка при скачивании видео по ссылке: https://www.tiktok.com/@dda637/video/6985065979734723845?source=webapp_messages&lang=ru-RU&is_copy_url=0&is_from_webapp=v1&sender_device=pc&sender_web_id=6949923795998377478 | Метод TTDownloader
+[21.07.2021 01:27:24] У пользователя @Why7even(474684994) возникла ошибка при скачивании видео по ссылке: https://www.tiktok.com/@dda637/video/6985065979734723845?source=webapp_messages&lang=ru-RU&is_copy_url=0&is_from_webapp=v1&sender_device=pc&sender_web_id=6949923795998377478 | Метод TTDownloader
+[21.07.2021 01:32:21] @Why7even(474684994) успешно отправил в чат бота TikTok: https://www.tiktok.com/@dda637/video/6985065979734723845

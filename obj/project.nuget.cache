@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/1Mq/TBhgWFbU7+tF0BUoVqMH2tbst1+q8s/nwYAdJh6F9kiVS3LtA/yaI9BThD1O++Q5Nc0qYTds8xeSH1iXg==",
+  "dgSpecHash": "6lbBZPTE+44eaLELTd0lr2Vh33ZkS9raGvSmnrcB7mH9nwzR9pzqXXqVX9ElX1ouGUIYtKPpMgX1YwB2Xtn+dw==",
   "success": true,
-  "projectFilePath": "G:\\Programs\\MyGitHubProjects\\TelegramBot\\TelegramBotForParsingTikTok.csproj",
+  "projectFilePath": "G:\\Programs\\MyGitHubProjects\\TelegramBot\\TikTokSender.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
@@ -80,7 +80,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\adxud\\.nuget\\packages\\telegram.bot\\16.0.1\\telegram.bot.16.0.1.nupkg.sha512"
+    "C:\\Users\\adxud\\.nuget\\packages\\telegram.bot\\16.0.2\\telegram.bot.16.0.2.nupkg.sha512"
   ],
   "logs": []
 }

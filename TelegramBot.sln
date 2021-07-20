@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TelegramBotForParsingTikTok", "TelegramBotForParsingTikTok.csproj", "{1F9369F7-ABAE-436F-82D1-27E37477541F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TikTokSender", "TikTokSender.csproj", "{1F9369F7-ABAE-436F-82D1-27E37477541F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TikTokSender__when_the_project_is_in_debug", "..\TelegramBot_when_the_project_is_in_debug\TikTokSender__when_the_project_is_in_debug\TikTokSender__when_the_project_is_in_debug.csproj", "{A3DDFE59-C2C8-44E7-A8CD-374B6EEB1DFF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{1F9369F7-ABAE-436F-82D1-27E37477541F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F9369F7-ABAE-436F-82D1-27E37477541F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F9369F7-ABAE-436F-82D1-27E37477541F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3DDFE59-C2C8-44E7-A8CD-374B6EEB1DFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3DDFE59-C2C8-44E7-A8CD-374B6EEB1DFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3DDFE59-C2C8-44E7-A8CD-374B6EEB1DFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3DDFE59-C2C8-44E7-A8CD-374B6EEB1DFF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
