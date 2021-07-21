@@ -1,18 +1,12 @@
 ﻿using InlineKeyboardNS;
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using Telegram.Bot;
 using Telegram.Bot.Types;
-using TelegramBotNS;
 using TTDownloaderNS;
-using DataBaseNS;
 using LogsNS;
 using static TelegramBotNS.TelegramBot;
 using Telegram.Bot.Types.ReplyMarkups;
+using System;
 
 namespace SendersNS {
     class Sender {
@@ -37,22 +31,30 @@ namespace SendersNS {
             return await bot.EditMessageTextAsync(chatId: userId, messageId: msgId, text:$"<strong><i>{txt, -10}</i></strong>" , replyMarkup: keyboard, parseMode: Telegram.Bot.Types.Enums.ParseMode.Html) ;
         }
         public static async Task CreateVideoPost(Message msg) {
-            string videoPath = @$"../../../VideoBuffer/tiktok{msg.Chat.Id}.mp4";
-            var videoUrl = msg.Text;
+            Random rndmNumber = new Random();
+            string videoPath = @$"../../../VideoBuffer/tiktok{msg.Chat.Id}{rndmNumber.Next(1000)}.mp4";
+            var videoUrl = LinkCorrector(msg.Text);
             var userId = msg.Chat.Id;
             var videoIsDownloading_msg = await bot.SendTextMessageAsync(chatId: userId, text: "Видео загружается...");
             try { await TTDownloader.Download(msg.Text, videoPath); } catch {
                 await bot.DeleteMessageAsync(chatId: userId, messageId: videoIsDownloading_msg.MessageId);
+                await bot.DeleteMessageAsync(chatId: userId, messageId:msg.MessageId);
                 await SendAutoDeleteMessage(userId, "Видео недоступно");
-                Logs.GetErrorLogAboutTTDownloader(msg);
+                Logs.GetErrorLogAboutTTDownloader(userId, videoUrl);
                 return;
             }
-            using (FileStream fileStream = new(videoPath, FileMode.Open, FileAccess.Read)) { await bot.SendVideoAsync(chatId: userId, video: fileStream, replyMarkup: await InlineKeyboard.GetVideoPostKeyboard(userId, videoUrl)); Logs.GetLogAboutTikTokLink(userId,videoUrl); }
+            FileStream fileStream = new(videoPath, FileMode.Open, FileAccess.Read);
+            await bot.SendVideoAsync(chatId: userId, video: fileStream, replyMarkup: await InlineKeyboard.GetVideoPostKeyboard(userId, videoUrl));
+            fileStream.Close();
             await bot.DeleteMessageAsync(chatId: userId, messageId: videoIsDownloading_msg.MessageId);
             await bot.DeleteMessageAsync(chatId: userId, messageId: msg.MessageId);
             System.IO.File.Delete(videoPath);
         }
-
+        public static string LinkCorrector(string link) {
+            try {
+                if (link.Contains("vm.tiktok.com")) { return link; } else { return link.Substring(0, link.IndexOf('?')); }
+            } catch { return link; }
+        }
         public static async Task<bool> CanVideoBePostedToChannel (long userId, string channel) {
             bool userCanPostMessages = false;
             bool botCanPostMessages = false;

@@ -15,7 +15,7 @@ namespace TelegramBotNS {
     class TelegramBot {
         public static TelegramBotClient bot;
         public static List<BotCommand> commands;
-        public static readonly long telegramBotOwnerId = 1474684994;
+        public static readonly long telegramBotOwnerId = 474684994;
         public TelegramBot(string token) {
             bot = new TelegramBotClient(token);
             bot.SetMyCommandsAsync(new[] {

@@ -1,15 +1,8 @@
 ﻿
 using DataBaseNS;
 using InlineKeyboardNS;
-using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Telegram.Bot;
 using Telegram.Bot.Args;
-using Telegram.Bot.Types;
 using SendersNS;
 using LogsNS;
 using static TelegramBotNS.TelegramBot;
@@ -75,7 +68,6 @@ namespace TelegramBotNS.Handlers.CallbackHandler {
                                         await bot.AnswerCallbackQueryAsync(callbackQueryId: e.CallbackQuery.Id, text: "Видео предложено на публикацию ZXC Тик Таки", showAlert: true);
                                     } else {
                                         await bot.SendVideoAsync(chatId: $"@{channel}", video: e.CallbackQuery.Message.Video.FileId, disableNotification: true);
-                                        Logs.GetLogAboutPostToChannel(e, channel);
                                     }
                                 } catch {
                                     await bot.AnswerCallbackQueryAsync(callbackQueryId: e.CallbackQuery.Id, text: $"У бота отключена возможность отправки сообщений в @{channel}, обратитесь к владельцу канала, чтобы это исправить", showAlert: true);

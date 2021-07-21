@@ -17,3 +17,4 @@ G:\Programs\MyGitHubProjects\TelegramBot\obj\Release\net5.0\TikTokSender.dll
 G:\Programs\MyGitHubProjects\TelegramBot\obj\Release\net5.0\ref\TikTokSender.dll
 G:\Programs\MyGitHubProjects\TelegramBot\obj\Release\net5.0\TikTokSender.pdb
 G:\Programs\MyGitHubProjects\TelegramBot\obj\Release\net5.0\TikTokSender.genruntimeconfig.cache
+G:\Programs\MyGitHubProjects\TelegramBot\bin\Release\net5.0\AngleSharp.dll

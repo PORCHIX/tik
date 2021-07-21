@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using Telegram.Bot;
 using Telegram.Bot.Types;
 using LogsNS;
 using static TelegramBotNS.TelegramBot;
@@ -66,7 +65,6 @@ namespace DataBaseNS {
                 if (!await AddableChannelIsAdded(msg)) {
                     if (await BotIsAdmin(msg)) {
                         AddChannelToUserFile(msg);
-                        Logs.GetLogAboutAddingChannelToUserFile(msg);
                         await Sender.SendAutoDeleteMessage(userId, "Канал успешно добавлен");
                     } else { await Sender.SendAutoDeleteMessage(userId, "Бот не добавлен в этот канал, попробуйте другого или нажмите кнопку: \"Отмена\""); }
                 } else { await Sender.SendAutoDeleteMessage(userId, "Канал уже добавлен, попробуйте другой или нажмите кнопку: \"Отмена\""); }

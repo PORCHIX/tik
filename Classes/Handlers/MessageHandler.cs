@@ -1,14 +1,6 @@
 ﻿using InlineKeyboardNS;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Telegram.Bot;
 using Telegram.Bot.Args;
 using Telegram.Bot.Types;
-using TelegramBotNS;
 using SendersNS;
 using DataBaseNS;
 using static TelegramBotNS.TelegramBot;
@@ -50,7 +42,10 @@ namespace TelegramBotNS.Handlers.MessageHandler {
                 default:
                     if (await DataBase.IsUserAddingChannel(userId)) { await DataBase.AddChannelEvent(msg); } else {
                         if (! await DataBase.UserChannelListIsEmpty(userId)) {
-                            if (MessageIsTikTokLink(msg)) { await Sender.CreateVideoPost(msg); } else {
+                            if (MessageIsTikTokLink(msg)) {
+                                await Sender.CreateVideoPost(msg);
+                            } 
+                            else {
                                 await bot.DeleteMessageAsync(chatId: userId, messageId: msg.MessageId);
                                 await Sender.SendAutoDeleteMessage(msg.Chat.Id, $"Неверная ссылка");
                             }

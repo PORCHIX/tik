@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Telegram.Bot.Types.ReplyMarkups;
 using DataBaseNS;
 using System.Threading.Tasks;
@@ -18,7 +17,6 @@ namespace InlineKeyboardNS {
         }
         public static InlineKeyboardMarkup Get_ZXC_Keyboard() {
             var keyboardButtonList = new List<InlineKeyboardButton[]>();
-            var channel = "zxc_memes";
             keyboardButtonList.Add(new[] { new InlineKeyboardButton { Text = $"Опубликовать в ZXC Тик Таки", CallbackData = $"ZXCoffer" } });
             keyboardButtonList.Add(new[] { new InlineKeyboardButton { Text = "Удалить", CallbackData = "DeletePost" } });
             return new InlineKeyboardMarkup(keyboardButtonList);
