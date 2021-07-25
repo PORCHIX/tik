@@ -7,7 +7,6 @@ G:\Programs\MyGitHubProjects\TelegramBot\bin\Release\net5.0\ref\TikTokSender.dll
 G:\Programs\MyGitHubProjects\TelegramBot\bin\Release\net5.0\TikTokSender.pdb
 G:\Programs\MyGitHubProjects\TelegramBot\bin\Release\net5.0\Newtonsoft.Json.dll
 G:\Programs\MyGitHubProjects\TelegramBot\bin\Release\net5.0\Telegram.Bot.dll
-G:\Programs\MyGitHubProjects\TelegramBot\obj\Release\net5.0\TikTokSender.csproj.AssemblyReference.cache
 G:\Programs\MyGitHubProjects\TelegramBot\obj\Release\net5.0\TikTokSender.GeneratedMSBuildEditorConfig.editorconfig
 G:\Programs\MyGitHubProjects\TelegramBot\obj\Release\net5.0\TikTokSender.AssemblyInfoInputs.cache
 G:\Programs\MyGitHubProjects\TelegramBot\obj\Release\net5.0\TikTokSender.AssemblyInfo.cs
@@ -17,4 +16,3 @@ G:\Programs\MyGitHubProjects\TelegramBot\obj\Release\net5.0\TikTokSender.dll
 G:\Programs\MyGitHubProjects\TelegramBot\obj\Release\net5.0\ref\TikTokSender.dll
 G:\Programs\MyGitHubProjects\TelegramBot\obj\Release\net5.0\TikTokSender.pdb
 G:\Programs\MyGitHubProjects\TelegramBot\obj\Release\net5.0\TikTokSender.genruntimeconfig.cache
-G:\Programs\MyGitHubProjects\TelegramBot\bin\Release\net5.0\AngleSharp.dll

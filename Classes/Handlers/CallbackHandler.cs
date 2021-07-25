@@ -6,6 +6,7 @@ using Telegram.Bot.Args;
 using SendersNS;
 using LogsNS;
 using static TelegramBotNS.TelegramBot;
+using System;
 
 namespace TelegramBotNS.Handlers.CallbackHandler {
     class CallbackHandler {
@@ -14,69 +15,68 @@ namespace TelegramBotNS.Handlers.CallbackHandler {
             var userId = msg.Chat.Id;
             List<string> channelList;
             switch (e.CallbackQuery.Data) {
-                case "CloseSettings":
+                case "DeleteMessage":
                     await bot.DeleteMessageAsync(chatId: userId, messageId: msg.MessageId);
                     break;
-                case "AddChannel":
-                    //await Sender.EditTextMessage(userId, msg.MessageId, "Введите ссылку на канал который вы хотите добавить", InlineKeyboard.AddingingChannelKeyboard());
-                    await bot.EditMessageTextAsync(chatId: userId, messageId: msg.MessageId, text:"Введите ссылку на канал который вы хотите добавить", replyMarkup: InlineKeyboard.AddingingChannelKeyboard());
+                case "GetAddingingChannelsKeyboard":
+                    await Sender.EditTextMessageAsync(userId, msg.MessageId, "Введите ссылку на канал который вы хотите добавить", InlineKeyboard.GetAddingingChannelsKeyboard());
                     await DataBase.AddToUserFile_AddingChanel_Status(userId);
                     await bot.AnswerCallbackQueryAsync(callbackQueryId: e.CallbackQuery.Id);
                     break;
-                case "HelpWithFindLink":
-                    await bot.AnswerCallbackQueryAsync(callbackQueryId: e.CallbackQuery.Id, text: "Ссылка находится во вкладке описание канала, она имеет вид: t.me/yourchannellink. Просто кликнув на нёё, вы скопируете её в буфер обмена, далее просто отправьте эту ссылку боту", showAlert: true);
+                case "GetHelpWithFindingChannelLink":
+                    await bot.AnswerCallbackQueryAsync(callbackQueryId: e.CallbackQuery.Id, text: "Ссылка находится во вкладке описание канала, она имеет вид: t.me/yourchannellink.\nПросто кликнув на нёё, вы скопируете её в буфер обмена, далее просто отправьте эту ссылку боту", showAlert: true);
                     break;
-                case "CancelAddingChannel":
+                case "CancelAddingChannelsEvent":
                     await DataBase.RemoveFromUserFile_AddingChannel_Status(userId);
-                    goto case "BackToSettings";
-                case "GetChannelList":
+                    goto case "ReturnToBotSettingsKeyboard";
+                case "GetChannelListKeyboard":
                     channelList = await DataBase.GetUserChannelList(userId);
                     if (!await DataBase.UserChannelListIsEmpty(userId)) {
-                        await bot.EditMessageTextAsync(chatId: userId, messageId: msg.MessageId,text: "Список добавленных каналов:", replyMarkup: InlineKeyboard.GetChannelList(channelList));
+                        await Sender.EditTextMessageAsync(userId, msg.MessageId, "Список добавленных каналов:", InlineKeyboard.GetChannelListKeyboard(channelList));
                         await bot.AnswerCallbackQueryAsync(callbackQueryId: e.CallbackQuery.Id);
                     } else { await bot.AnswerCallbackQueryAsync(callbackQueryId: e.CallbackQuery.Id, text: $"У пользователя: @{msg.Chat.Username} нет добавленных каналов", showAlert: true); }
                     break;
-                case "BackToSettings":
-                    await bot.EditMessageTextAsync(chatId: userId, messageId: msg.MessageId, text: "Настройки:", replyMarkup: InlineKeyboard.GetSettings());
+                case "ReturnToBotSettingsKeyboard":
+                    await Sender.EditTextMessageAsync(userId, msg.MessageId, "Настройки:", InlineKeyboard.GetBotSettingsKeyboard());
                     await bot.AnswerCallbackQueryAsync(callbackQueryId: e.CallbackQuery.Id);
                     break;
-                case "BackToChannelList":
-                    goto case "GetChannelList";
-                case "DeletePost":
-                    await bot.DeleteMessageAsync(chatId: userId, messageId: msg.MessageId);
+                case "ReturnToChannelListKeyboard":
+                    goto case "GetChannelListKeyboard";
+                case "ApprovePublicationOffer":
+                    await bot.SendVideoAsync(chatId: "@zxc_memes", video: e.CallbackQuery.Message.Video.FileId, disableNotification: true);
                     break;
-                case "ZXCoffer":
-                    await bot.SendVideoAsync(chatId: "@tiktoksender_test", video: e.CallbackQuery.Message.Video.FileId, disableNotification: true);
+                case "GetPublicationDesignSettings":
+                    await Sender.EditTextMessageAsync(userId, msg.MessageId, "Внесите изменения в оформление публикации", InlineKeyboard.GetPublicationDesignSettings());
+                    await bot.AnswerCallbackQueryAsync(callbackQueryId: e.CallbackQuery.Id);
+                    break;
+                case "InDeveloping":
+                    await bot.AnswerCallbackQueryAsync(callbackQueryId: e.CallbackQuery.Id,text: "В разработке", showAlert: true);
                     break;
                 default:
                     channelList = await DataBase.GetUserChannelList(userId);
                     foreach (var channel in channelList) {
-                        if (e.CallbackQuery.Data == channel) {
-                            //await Sender.EditTextMessage(userId, msg.MessageId, $"{channel}", InlineKeyboard.DeleteChannel(channel));
-                            await bot.EditMessageTextAsync(chatId: userId, messageId: msg.MessageId, text: $"{channel}", replyMarkup: InlineKeyboard.DeleteChannel(channel));
-                            await bot.AnswerCallbackQueryAsync(callbackQueryId: e.CallbackQuery.Id);
-                        }
-                        if (e.CallbackQuery.Data == $"Delete_{channel}") {
-                            await DataBase.RemoveChannelFromUserFile(userId, channel);
-                            if (!await DataBase.UserChannelListIsEmpty(userId)) { goto case "BackToChannelList"; } else { goto case "BackToSettings"; }
-                        }
                         if (e.CallbackQuery.Data == $"PostVideoTo{channel}") {
                             if (await Sender.CanVideoBePostedToChannel(userId, channel)) {
-                                try {
-                                    if (channel == "tiktoksender_test" && userId != 474684994) {
-                                        await bot.SendVideoAsync(chatId: "@zxc_memes_offers", video: e.CallbackQuery.Message.Video.FileId, caption: $"Предложение на публикацию от: {bot.GetChatAsync(userId).Result.Username} в ZXC Тик Таки", replyMarkup: InlineKeyboard.Get_ZXC_Keyboard(), disableNotification: true);
-                                        await bot.AnswerCallbackQueryAsync(callbackQueryId: e.CallbackQuery.Id, text: "Видео предложено на публикацию ZXC Тик Таки", showAlert: true);
-                                    } else {
-                                        await bot.SendVideoAsync(chatId: $"@{channel}", video: e.CallbackQuery.Message.Video.FileId, disableNotification: true);
-                                    }
-                                } catch {
-                                    await bot.AnswerCallbackQueryAsync(callbackQueryId: e.CallbackQuery.Id, text: $"У бота отключена возможность отправки сообщений в @{channel}, обратитесь к владельцу канала, чтобы это исправить", showAlert: true);
-                                    Logs.GetErrorLogAboutPostToChannel(e, channel);
+                                if (channel == "zxc_memes" && userId != 474684994) {
+                                    await bot.SendVideoAsync(chatId: "@zxc_memes_offers", video: e.CallbackQuery.Message.Video.FileId, caption: $"Предложение на публикацию от: @{bot.GetChatAsync(userId).Result.Username} в ZXC Тик Таки", replyMarkup: InlineKeyboard.GetPublicationOfferKeyboard());
+                                    await bot.AnswerCallbackQueryAsync(callbackQueryId: e.CallbackQuery.Id, text: "Видео предложено на публикацию", showAlert: true);
+                                } 
+                                else {
+                                    await bot.SendVideoAsync(chatId: $"@{channel}", video: e.CallbackQuery.Message.Video.FileId, disableNotification: true);
+                                    await bot.AnswerCallbackQueryAsync(callbackQueryId: e.CallbackQuery.Id, text: "Видео опубликовано", showAlert: true);
                                 }
-                                await bot.AnswerCallbackQueryAsync(callbackQueryId: e.CallbackQuery.Id, text: "Видео опубликовано", showAlert: true);
-                            } else { await bot.AnswerCallbackQueryAsync(callbackQueryId: e.CallbackQuery.Id, text: $"Вы не можете запостить видео, т.к. вы или бот не являетесь администратором в @{channel}.", showAlert: true); }
+                            } else { await bot.AnswerCallbackQueryAsync(callbackQueryId: e.CallbackQuery.Id, text: $"Вы не можете запостить видео, т.к. вы и/или бот не являетесь администратором канала @{channel}.", showAlert: true); }
+                        }
+                        if (e.CallbackQuery.Data == $"Select{channel}ToDeleteFromChannelList") {
+                            await Sender.EditTextMessageAsync(userId, msg.MessageId, $"@{channel}", InlineKeyboard.GetDeletingChannelKeyboard(channel));
+                            await bot.AnswerCallbackQueryAsync(callbackQueryId: e.CallbackQuery.Id);
+                        }
+                        if (e.CallbackQuery.Data == $"Delete{channel}FromChannelList") {
+                            await DataBase.RemoveChannelFromUserFile(userId, channel);
+                            if (!await DataBase.UserChannelListIsEmpty(userId)) { goto case "ReturnToChannelListKeyboard"; } else { goto case "ReturnToBotSettingsKeyboard"; }
                         }
                     }
+                    await bot.AnswerCallbackQueryAsync(callbackQueryId: e.CallbackQuery.Id);
                     break;            
             }  
         }
