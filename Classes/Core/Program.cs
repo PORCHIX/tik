@@ -5,9 +5,9 @@ using TTDownloaderNS;
 
 namespace TelegramBotProject {
     class Program {
-        const string ttSender_token = "1898783341:AAGMhW4nMMfyHkV6lXx6o1P9ue3vCeDD5K0";
-        const string ttSender_debug_token = "1904203371:AAFUrT0yoddHe00f6-54EatLJjy2hQPu-HU";
-        public static readonly long telegramBotOwnerId = 474684994;
+        const string ttSender_token = "2054038321:AAHrWbcc99iRFT2DMZan33hyOzfhCNwQqK4";
+        const string ttSender_debug_token = "2054038321:AAHrWbcc99iRFT2DMZan33hyOzfhCNwQqK4";
+        public static readonly long telegramBotOwnerId = 1719045064;
         private static TelegramBot TikTokSender;
         static async Task Main() {
             Console.Title = "TikTokSender";
